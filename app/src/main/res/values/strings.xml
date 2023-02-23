@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Any Dish</string>
+    <string name="logoName">AnyDish</string>
+    <string name="email_auth">SignIn with Email</string>
+    <string name="phone_auth">SignIn with Phone</string>
+    <string name="signUp">Sign Up</string>
+    <string name="signUp_with">Sign Up With</string>
+    <string name="signIn_with">Sign In With</string>
+    <string name="signIn_with_Email">Sign In With Email</string>
+    <string name="verify_phone">Verify Phone Number</string>
+    <string name="signIn_with_phone">Sign In With Phone</string>
+    <string name="chef">Connect As a Chef</string>
+    <string name="consumer">Connect As a Consumer</string>
+    <string name="delivery">Connect As a Delivery</string>
+    <string name="user_type">Please Select User Type</string>
+    <string name="choose">Please Choose One</string>
+    <string name="forgot">Forgot Password ?</string>
+    <string name="slogan1">A taste of home, no matter where you are</string>
+    <string name="slogan2">Discover the true taste of love and care with every bite of homemade food</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

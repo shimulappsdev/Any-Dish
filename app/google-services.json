@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "115983430033",
+    "project_id": "home-made-food-68d16",
+    "storage_bucket": "home-made-food-68d16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115983430033:android:a34469b5bbc4c280a9aa30",
+        "android_client_info": {
+          "package_name": "com.example.homemadefood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "115983430033-stgbk05aqjd6jmmf81dud1d328v3bn7m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homemadefood",
+            "certificate_hash": "145388fdb501016c77561f6b30e7114c1e3709f1"
+          }
+        },
+        {
+          "client_id": "115983430033-6krhvof6i2h22nl5u0jvpl44tuvj0cdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvdan8ztLtkFQmeXIh44jiwU3l5pWmgkk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115983430033-6krhvof6i2h22nl5u0jvpl44tuvj0cdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
