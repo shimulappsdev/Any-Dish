@@ -6,16 +6,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.ChefDashboardFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:text="Chef Dashboard"
-        android:textSize="@dimen/_20ssp"
-        android:textColor="@color/theme_color"
+        android:background="@drawable/bottom_nav_back"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        app:menu="@menu/bottom_menu"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemRippleColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

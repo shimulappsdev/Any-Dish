@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.example.homemadefood.R;
 import com.example.homemadefood.databinding.ActivityContainerBinding;
+import com.example.homemadefood.fragments.ChefAddNewDishFragment;
 import com.example.homemadefood.fragments.ChefDashboardFragment;
 import com.example.homemadefood.fragments.DeliveryDashboardFragment;
 
@@ -15,8 +16,9 @@ public class ContainerActivity extends AppCompatActivity {
     ActivityContainerBinding binding;
     ChefDashboardFragment chefDashboardFragment = new ChefDashboardFragment();
     DeliveryDashboardFragment deliveryDashboardFragment = new DeliveryDashboardFragment();
+    ChefAddNewDishFragment chefAddNewDishFragment = new ChefAddNewDishFragment();
     Intent intent;
-    String signIn;
+    String signIn, addDish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class ContainerActivity extends AppCompatActivity {
 
         intent = getIntent();
         signIn = intent.getStringExtra("signIn");
+        addDish = intent.getStringExtra("addDish");
 
         if (signIn != null){
             if (signIn.equals("Chef")){
@@ -36,5 +39,8 @@ public class ContainerActivity extends AppCompatActivity {
             }
         }
 
+        if (addDish != null && addDish.equals("addDish")){
+            getSupportFragmentManager().beginTransaction().replace(R.id.containerActivity, chefAddNewDishFragment).commit();
+        }
     }
 }

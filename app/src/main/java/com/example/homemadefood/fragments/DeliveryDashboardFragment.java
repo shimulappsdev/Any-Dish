@@ -21,67 +21,13 @@ import java.util.ArrayList;
 public class DeliveryDashboardFragment extends Fragment {
 
     FragmentDeliveryDashboardBinding binding;
-    ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentDeliveryDashboardBinding.inflate(getLayoutInflater(), container, false);
 
-        fragmentArrayList.add(new DeliveryHomeFragment());
-        fragmentArrayList.add(new DeliveryPendingOrderFragment());
-        fragmentArrayList.add(new DeliveryOrderFragment());
-        fragmentArrayList.add(new DeliveryPostDishFragment());
 
-        FragmentAdapter fragmentAdapter = new FragmentAdapter(this, fragmentArrayList);
-        binding.viewPager.setAdapter(fragmentAdapter);
-
-        binding.viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                switch (position){
-                    case 0:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_menu);
-                        break;
-                    case 1:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_pendingOrder_menu);
-                        break;
-                    case 2:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_order_menu);
-                        break;
-                    case 3:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_postDish_menu);
-                        break;
-                }
-                super.onPageSelected(position);
-            }
-        });
-
-        binding.bottomMenu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                switch (item.getItemId()){
-                    case R.id.delivery_home_menu:
-                        binding.viewPager.setCurrentItem(0);
-                        break;
-
-                    case R.id.delivery_home_pendingOrder_menu:
-                        binding.viewPager.setCurrentItem(1);
-                        break;
-
-                    case R.id.delivery_home_order_menu:
-                        binding.viewPager.setCurrentItem(2);
-                        break;
-
-                    case R.id.delivery_home_postDish_menu:
-                        binding.viewPager.setCurrentItem(3);
-                        break;
-                }
-
-                return true;
-            }
-        });
 
         return binding.getRoot();
     }

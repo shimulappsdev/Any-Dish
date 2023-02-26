@@ -9,16 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.homemadefood.R;
-import com.example.homemadefood.databinding.FragmentDeliveryPostDishBinding;
+import com.example.homemadefood.databinding.FragmentChefPendingOrderBinding;
 
-public class DeliveryPostDishFragment extends Fragment {
+public class ChefPendingOrderFragment extends Fragment {
 
-    FragmentDeliveryPostDishBinding binding;
+    FragmentChefPendingOrderBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentDeliveryPostDishBinding.inflate(getLayoutInflater(), container, false);
+        binding = FragmentChefPendingOrderBinding.inflate(getLayoutInflater(), container, false);
 
 
 

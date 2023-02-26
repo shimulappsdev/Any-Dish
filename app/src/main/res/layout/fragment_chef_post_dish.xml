@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/chefPostDishLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChefPostDishFragment">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Post Dish"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addDishBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Add New Dish"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textAllCaps="false"
+        android:background="@drawable/green_btn_back"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_nav_back"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,18 +9,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.homemadefood.R;
-import com.example.homemadefood.databinding.FragmentDeliveryHomeBinding;
+import com.example.homemadefood.databinding.FragmentChefAddNewDishBinding;
 
-public class DeliveryHomeFragment extends Fragment {
+public class ChefAddNewDishFragment extends Fragment {
 
-    FragmentDeliveryHomeBinding binding;
+    FragmentChefAddNewDishBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentDeliveryHomeBinding.inflate(getLayoutInflater(), container, false);
+        binding = FragmentChefAddNewDishBinding.inflate(getLayoutInflater(), container, false);
 
-
+        binding.backBtn.setOnClickListener(view -> {
+            getActivity().finish();
+        });
 
         return binding.getRoot();
     }

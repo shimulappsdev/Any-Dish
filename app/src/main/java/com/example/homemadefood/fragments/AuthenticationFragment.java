@@ -20,7 +20,6 @@ import com.google.firebase.auth.FirebaseUser;
 public class AuthenticationFragment extends Fragment {
 
     FragmentAuthenticationBinding binding;
-    FirebaseUser firebaseUser;
     Intent intent;
     String userType;
 
@@ -31,28 +30,7 @@ public class AuthenticationFragment extends Fragment {
 
         intent = getActivity().getIntent();
         userType = intent.getStringExtra("userType");
-        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        if (firebaseUser != null){
-            if (userType.equals("Chef")){
-                Intent chefIntent = new Intent(getActivity(), ContainerActivity.class);
-                chefIntent.putExtra("userType", "Chef");
-                chefIntent.putExtra("signIn", "Chef");
-                startActivity(chefIntent);
-                getActivity().finish();
-            }
-            if (userType.equals("Consumer")){
-                startActivity(new Intent(getActivity(), MainActivity.class));
-                getActivity().finish();
-            }
-            if (userType.equals("Delivery")){
-                Intent chefIntent = new Intent(getActivity(), ContainerActivity.class);
-                chefIntent.putExtra("userType", "Delivery");
-                chefIntent.putExtra("signIn", "Delivery");
-                startActivity(chefIntent);
-                getActivity().finish();
-            }
-        }
 
         binding.emailAuthBtn.setOnClickListener(view -> {
             Intent intent = new Intent(getActivity(), EntryActivity.class);
