@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back8"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.ChefAddNewDishFragment">
 
@@ -67,6 +68,7 @@
                         android:src="@drawable/imagehint"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -91,7 +93,7 @@
                 android:id="@+id/nameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                android:background="@drawable/phone_input_back"
+                android:background="@drawable/frame_back"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +139,7 @@
                 android:id="@+id/priceLayout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                android:background="@drawable/phone_input_back"
+                android:background="@drawable/frame_back"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -183,7 +185,7 @@
                 android:id="@+id/quantityLayout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                android:background="@drawable/phone_input_back"
+                android:background="@drawable/frame_back"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -229,7 +231,7 @@
                 android:id="@+id/descriptionLayout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_70sdp"
-                android:background="@drawable/phone_input_back"
+                android:background="@drawable/frame_back"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -272,6 +274,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addDishBtn"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
                 android:fontFamily="@font/roboto"

@@ -111,30 +111,32 @@ public class EmailSignInFragment extends Fragment {
 
     private void userSignIn(String email, String password) {
         dialog.show();
-
-        if (firebaseAuth.getCurrentUser().isEmailVerified()){
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
                         dialog.dismiss();
-                        if (userType.equals("Chef")){
-                            Intent chefIntent = new Intent(getActivity(), ContainerActivity.class);
-                            chefIntent.putExtra("userType", "Chef");
-                            chefIntent.putExtra("signIn", "Chef");
-                            startActivity(chefIntent);
-                            getActivity().finish();
-                        }else if (userType.equals("Consumer")){
-                            startActivity(new Intent(getActivity(), MainActivity.class));
-                            getActivity().finish();
-                        }else if (userType.equals("Delivery")){
-                            Intent chefIntent = new Intent(getActivity(), ContainerActivity.class);
-                            chefIntent.putExtra("userType", "Delivery");
-                            chefIntent.putExtra("signIn", "Delivery");
-                            startActivity(chefIntent);
-                            getActivity().finish();
+                        if (firebaseAuth.getCurrentUser().isEmailVerified()){
+                            if (userType.equals("Chef")){
+                                Intent chefIntent = new Intent(getActivity(), ContainerActivity.class);
+                                chefIntent.putExtra("userType", "Chef");
+                                chefIntent.putExtra("signIn", "Chef");
+                                startActivity(chefIntent);
+                                getActivity().finish();
+                            }else if (userType.equals("Consumer")){
+                                startActivity(new Intent(getActivity(), MainActivity.class));
+                                getActivity().finish();
+                            }else if (userType.equals("Delivery")){
+                                Intent chefIntent = new Intent(getActivity(), ContainerActivity.class);
+                                chefIntent.putExtra("userType", "Delivery");
+                                chefIntent.putExtra("signIn", "Delivery");
+                                startActivity(chefIntent);
+                                getActivity().finish();
+                            }else {
+                                Toast.makeText(getActivity(), "Please Select a User Type First", Toast.LENGTH_SHORT).show();
+                            }
                         }else {
-                            Toast.makeText(getActivity(), "Please Select a User Type First", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Please verify your mail first", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -145,9 +147,6 @@ public class EmailSignInFragment extends Fragment {
                     ShowAlert(e.getLocalizedMessage());
                 }
             });
-        }else {
-            Toast.makeText(getActivity(), "Please verify your email first", Toast.LENGTH_SHORT).show();
-        }
     }
     private void ShowAlert(String errorMsg) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

@@ -38,7 +38,7 @@ public class ChefPostDishFragment extends Fragment {
         binding.chefPostDishLayout.setBackgroundDrawable(animationDrawable);
         animationDrawable.start();
 
-        binding.addDishBtn.setOnClickListener(view -> {
+        binding.postDishBtn.setOnClickListener(view -> {
             Intent intent = new Intent(getActivity(), ContainerActivity.class);
             intent.putExtra("addDish","addDish");
             startActivity(intent);

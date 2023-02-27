@@ -41,16 +41,16 @@ public class ChefDashboardFragment extends Fragment {
             public void onPageSelected(int position) {
                 switch (position){
                     case 0:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_menu);
+                        binding.bottomMenu.setSelectedItemId(R.id.chef_home_menu);
                         break;
                     case 1:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_pendingOrder_menu);
+                        binding.bottomMenu.setSelectedItemId(R.id.chef_home_pendingOrder_menu);
                         break;
                     case 2:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_order_menu);
+                        binding.bottomMenu.setSelectedItemId(R.id.chef_home_order_menu);
                         break;
                     case 3:
-                        binding.bottomMenu.setSelectedItemId(R.id.delivery_home_postDish_menu);
+                        binding.bottomMenu.setSelectedItemId(R.id.chef_home_postDish_menu);
                         break;
                 }
                 super.onPageSelected(position);
@@ -62,19 +62,19 @@ public class ChefDashboardFragment extends Fragment {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()){
-                    case R.id.delivery_home_menu:
+                    case R.id.chef_home_menu:
                         binding.viewPager.setCurrentItem(0);
                         break;
 
-                    case R.id.delivery_home_pendingOrder_menu:
+                    case R.id.chef_home_pendingOrder_menu:
                         binding.viewPager.setCurrentItem(1);
                         break;
 
-                    case R.id.delivery_home_order_menu:
+                    case R.id.chef_home_order_menu:
                         binding.viewPager.setCurrentItem(2);
                         break;
 
-                    case R.id.delivery_home_postDish_menu:
+                    case R.id.chef_home_postDish_menu:
                         binding.viewPager.setCurrentItem(3);
                         break;
                 }

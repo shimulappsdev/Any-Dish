@@ -28,15 +28,16 @@
         app:layout_constraintBottom_toBottomOf="@id/toolBar"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/addDishBtn"
+        android:id="@+id/postDishBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="Add New Dish"
+        android:text="Post Dish"
         android:textColor="@color/white"
         android:textSize="@dimen/_12ssp"
         android:textAllCaps="false"
         android:background="@drawable/green_btn_back"
+        android:backgroundTint="@color/yellow"
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_7sdp"
         app:layout_constraintStart_toStartOf="parent"

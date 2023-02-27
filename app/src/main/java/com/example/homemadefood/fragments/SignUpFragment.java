@@ -158,8 +158,7 @@ public class SignUpFragment extends Fragment {
                                             public void onClick(DialogInterface dialogInterface, int i) {
                                                 dialog.dismiss();
                                                 Intent intent = new Intent(getActivity(), EntryActivity.class);
-                                                intent.putExtra("authType", "email");
-                                                intent.putExtra("userType", userType);
+                                                intent.putExtra("select", "select");
                                                 startActivity(intent);
                                                 getActivity().finish();
                                             }

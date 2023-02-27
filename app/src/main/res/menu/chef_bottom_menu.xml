@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/delivery_home_menu"
+        android:id="@+id/chef_home_menu"
         android:title="Home"
         android:icon="@drawable/home"
         />
     <item
-        android:id="@+id/delivery_home_pendingOrder_menu"
+        android:id="@+id/chef_home_pendingOrder_menu"
         android:title="Pending Order"
         android:icon="@drawable/pending_order"
         />
     <item
-        android:id="@+id/delivery_home_order_menu"
+        android:id="@+id/chef_home_order_menu"
         android:title="Order"
         android:icon="@drawable/order"
         />
     <item
-        android:id="@+id/delivery_home_postDish_menu"
+        android:id="@+id/chef_home_postDish_menu"
         android:title="Post Dish"
         android:icon="@drawable/post_dish"
         />

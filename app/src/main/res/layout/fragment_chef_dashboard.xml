@@ -24,7 +24,7 @@
         android:background="@drawable/bottom_nav_back"
         android:layout_marginHorizontal="@dimen/_7sdp"
         android:layout_marginBottom="@dimen/_7sdp"
-        app:menu="@menu/bottom_menu"
+        app:menu="@menu/chef_bottom_menu"
         app:itemTextColor="@color/bottom_nav_color"
         app:itemIconTint="@color/bottom_nav_color"
         app:itemRippleColor="@color/white"
