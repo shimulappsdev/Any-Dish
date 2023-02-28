@@ -105,6 +105,7 @@ public class ChefAddNewDishFragment extends Fragment {
 
             Map<String, Object> dishMap = new HashMap<>();
             dishMap.put("dish_id", dishId);
+            dishMap.put("chef_id", currentUser);
             dishMap.put("dish_name", dishName);
             dishMap.put("dish_price", dishPrice);
             dishMap.put("dish_quantity", dishQuantity);
